@@ -1,0 +1,14 @@
+package aula3;
+
+public class Exercicio11 {
+    public static void main(String[] args) {
+        int idade = 17;
+        boolean temAutorizacao = true;
+
+        if(idade >= 18 && temAutorizacao){
+            System.out.println("Pode entrar na festa");
+        } else {
+            System.out.println("Não pode entrar");
+        }
+    }
+}
