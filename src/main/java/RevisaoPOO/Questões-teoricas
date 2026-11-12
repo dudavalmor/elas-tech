@@ -1,0 +1,44 @@
+1 - a) Abstração consiste em esconder os detalhes internos e complexos de implementação, mostrando apenas as funcionalidades essenciais de um objeto.
+Com isso, podemos utilizar um objeto sem precisar conhecer todo o funcionamento interno dele.
+
+b) A abstração consiste esconder os detalhes complexos de implementação e mostrar apenas as funcionalidades essenciais de um objeto.
+Já o encapsulamento, consiste em protejer os dados de uma classe, restringindo o acesso direto aos seus atributos, geralmente utilizando private e metodos getters e setters
+
+c) Não sabemos. É um exemplo de abstração pois o Java esconde toda a complexidade de implementação e nos disponibiliza um metodo simples, para adicionar os elementos a lista,
+permitindo que utilizemos sem conhecer todo o funcionamento interno.
+
+2 - a) O principio da responsabilidade única. A classe Relatorio está fazendo muitas coisas diferentes. Para corrigir, devemos dividir as responsabilidades em classes diferentes
+
+b) O princípio aberto/fechado. A classe precisa ser modificada sempre que um novo tipo de mensagem é adicionado, criando novos if-elses, dificultando a manutenção e a expansão
+do código. Para corrigir, devemos utilizar uma interface para representar os tipos de mensagens, criando uma classe para cada tipo.
+
+c) O principio da inversão de dependências. A classe PedidoService depende diretamente de uma implementação específica, ficando fortemente acoplada ao banco de dados.
+Para corrigir, criamos uma interface (ex: Repositorio) e fazemos o MySQLRepositorio incrementá-la. A classe PedidoService dependerá da interface, e não da implementação.
+
+4 - a) private: somente dentro da própria classe onde foi declarado. não pode ser acessado diretamente por outras classes, nem mesmo pelas classes filhas.
+
+b) default: pode ser acessado por qualquer classe que esteja dentro do mesmo pacote. Não pode ser acessado diretamente pro classes de outros pacotes
+
+c) protected: pode ser acessado dentro do mesmo pacote e também pelas filhas, mesmo que sejam em pacotes diferentes
+
+d) public: pode ser acessado de qualquer lugar do projeto, independente do pacote ou herança.
+
+5 - d) Aprensetará um erro de compilação, pois Forma é uma classe abstrata e não pode ser instanciada diretamente usando new. Uma classe abstrata serve como modelo para outras classes,
+que herdam suas características e implementam seus métodos.
+
+6 -
+ETAPA 1: ENCAPSULAMENTO - atributos privados e getters/setters
+
+ETAPA 2: ABSTRAÇÃO - Classe abstrata e método abstrato
+
+ETAPA 3: HERANÇA E POLIMORFISMO
+HERANÇA: classes Desenvolvedor e Gerente estendendo de Funcionário
+Polimorfismo: Cada funcionário calcula seu salário de maneira diferente
+
+ETAPA 4: Interfaces e Polimorfismo
+Interfaces: Notificador define o contato
+Polimorfismo: Email e SMS implementam notificar() de maneiras diferentes
+
+ETAPA5: Injeção de dependência - FolhaPagamento recebe Notificador pelo construtor
+
+ETAPA 6: Polimorfismo - A folha trabalha com diferentes tipos de funcionários e notificadores
