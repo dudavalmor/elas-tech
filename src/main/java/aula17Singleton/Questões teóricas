@@ -1,0 +1,9 @@
+1) b
+
+2) para impedir que outras classes criem novas instâncias usando new, garantindo que a classe controle a criação de seu único objeto
+
+3) c
+
+4) apresenta um erro de compilação
+
+5) b
